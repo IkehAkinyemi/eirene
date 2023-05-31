@@ -1,0 +1,158 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    tab-size: 4; 
+    box-sizing: border-box;
+    color: #000;
+    background-color: #fff;
+}
+
+body {
+    padding: 0 1rem;
+    margin: 10% 25%;
+    font-family: Inter var,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    /* font-family: 'Montserrat', sans-serif; */
+    line-height: 1.7;
+}
+
+section, article {
+    margin-bottom: 70px;
+}
+
+/*Header*/
+header .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .search input {
+    width: auto;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    border: 0.5px solid #000;
+}
+
+header .search input.btn {
+    background: grey;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+}
+
+header .search input.btn:hover {
+    background-color: #6a6565;
+}
+
+
+header h1, h2, h3 {
+    margin: 25px 0;
+    font-size: 1.5rem;
+}
+header h1 i {
+    padding-left: 350px;
+}
+
+header .navbar ul {
+    display: flex;
+    justify-content: end;
+}
+
+header .current-page a {
+    color: grey;
+    text-decoration: none;
+}
+
+header nav .nav-list, li a {
+    margin: 25px 0;
+    padding: 5px;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*Home Main*/
+section article, p {
+    margin: 20px 0;
+}
+
+/*Posts Main*/
+section .posts .post-items {
+    color: grey;
+    flex: 0 0 100%;
+    margin: 24px 0;
+    padding: 0px 24px;
+    line-height: 1.5;
+    border: 0.5px solid #000;
+    border-radius: 10px;
+}
+
+section .posts .post-items h3 {
+    margin: 5px 0px;
+}
+
+section .posts .post-items .post-cont {
+    margin: 10px 0;
+}
+
+section .posts .post-items .dates {
+    margin-top: 0;
+    font-size: small;
+}
+
+/*Footer*/
+footer {
+    display: flex;
+    font-size: small;
+    border-top: 2px solid #000;
+    justify-content: space-between;
+}
+
+footer .socials a i {
+    padding: 0 5px;
+}
+
+/*Medis Queries*/
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio:1.5), screen and (min-resolution: 1.5dppx) {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@media (max-width: 770px) {
+    body {
+        margin: 5% 10%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    header .navbar ul {
+        justify-content: center;
+    }
+
+    footer {
+        display: block;
+        text-align: center;
+    }
+
+    footer .socials a i {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 820px) {
+    body {
+        margin: 5% 15%;
+    }
+}
+
+@media (min-width: 820px) {
+    body {
+        margin: 10% 20%;
+    }
+}
