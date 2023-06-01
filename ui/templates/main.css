@@ -21,6 +21,10 @@ section, article {
     margin-bottom: 70px;
 }
 
+span {
+    margin-left: 5px;
+}
+
 /*Header*/
 header .search {
     display: flex;
@@ -33,8 +37,19 @@ header .search input {
     height: fit-content;
     padding: 5px;
     border-radius: 10px;
-    border: 0.5px solid #000;
+    border: 0.5px solid #000; 
+    transition: width .35s ease-in-out;
+    -webkit-transition: width .35s ease-in-out;
+    -webkit-transition: width ease 0.2s, opacity ease 0.4s;
+    -moz-transition: width ease 0.2s, opacity ease 0.4s;
+    -webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25), inset 0px 1px 2px rgba(0, 0, 0, 0.7), 0px 1px 0px rgba(255, 255, 255, 0.03);
+    -moz-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25), inset 0px 1px 2px rgba(0, 0, 0, 0.7), 0px 1px 0px rgba(255, 255, 255, 0.03);
 }
+
+header .search input:focus {
+    width: 200px;
+    opacity: 1.0; 
+  }
 
 header .search input.btn {
     background: grey;
@@ -51,9 +66,6 @@ header .search input.btn:hover {
 header h1, h2, h3 {
     margin: 25px 0;
     font-size: 1.5rem;
-}
-header h1 i {
-    padding-left: 350px;
 }
 
 header .navbar ul {
