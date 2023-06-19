@@ -3,6 +3,7 @@ package api
 import (
 	"context"
 	"errors"
+	"html/template"
 	"log"
 	"net/http"
 	"os"
@@ -16,22 +17,30 @@ import (
 )
 
 type Server struct {
-	configs util.Configs
-	logger zerolog.Logger
+	configs       util.Configs
+	logger        zerolog.Logger
+	templateCache map[string]*template.Template
+	store         models.Store
 }
 
-func NewServer(configs util.Configs,
+func NewServer(
+	configs util.Configs,
 	store models.Store,
+	templateCache map[string]*template.Template,
+	logger zerolog.Logger,
 ) *Server {
 	return &Server{
-		configs: configs,
+		configs:       configs,
+		store:         store,
+		templateCache: templateCache,
+		logger: logger,
 	}
 }
 
 func (s *Server) Start() error {
 	srv := &http.Server{
-		Addr: s.configs.ServerAddress,
-		Handler: s.setupRoutes(),
+		Addr:         s.configs.ServerAddress,
+		Handler:      s.setupRoutes(),
 		ErrorLog:     log.New(s.logger, "", 0),
 		IdleTimeout:  time.Minute,
 		ReadTimeout:  10 * time.Second,
@@ -48,8 +57,8 @@ func (s *Server) Start() error {
 		sc := <-quit
 
 		s.logger.Info().
-		Str("signal", sc.String()).
-		Msg("shutting down server")
+			Str("signal", sc.String()).
+			Msg("shutting down server")
 
 		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 		defer cancel()

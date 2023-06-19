@@ -1,7 +1,7 @@
 package db
 
-func (mc *MongoClient) CreatePost(){}
+func (mc *MongoClient) CreatePost() {}
 
-func (mc *MongoClient) GetPost(){}
+func (mc *MongoClient) GetPost() {}
 
-func (mc *MongoClient) UpdatePost(){}
+func (mc *MongoClient) UpdatePost() {}

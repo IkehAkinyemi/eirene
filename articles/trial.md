@@ -1,5 +1,3 @@
-# Rust Concurrency Patterns for Parallel Programming
-
 ## Introduction
 
 Rust is a modern programming language that emphasizes performance, safety, and concurrency. Developed by Mozilla, Rust is designed to be a low-level systems language that can also be used for high-level programming tasks. Rust's unique features, including its memory safety guarantees, ownership and borrowing system, and support for fearless concurrency, make it a powerful language for writing safe and performant concurrent programs.
