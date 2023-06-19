@@ -3,7 +3,7 @@ module github.com/IkehAkinyemi/myblog
 go 1.20
 
 require (
-	github.com/julienschmidt/httprouter v1.3.0
+	github.com/bmizerany/pat v0.0.0-20210406213842-e4b6760bdd6f
 	github.com/rs/zerolog v1.29.1
 	github.com/russross/blackfriday/v2 v2.1.0
 	github.com/spf13/viper v1.16.0

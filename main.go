@@ -12,7 +12,6 @@ import (
 
 	"github.com/IkehAkinyemi/myblog/api"
 	"github.com/IkehAkinyemi/myblog/internal/db"
-	"github.com/IkehAkinyemi/myblog/internal/models"
 	"github.com/IkehAkinyemi/myblog/internal/util"
 	"github.com/rs/zerolog"
 )
@@ -32,14 +31,16 @@ func main() {
 	if configs.Env == "development" {
 		log.Logger = log.Output(
 			zerolog.ConsoleWriter{
-				Out:        os.Stderr,
+				Out:        os.Stdout,
 				TimeFormat: time.RFC3339,
 			},
 		).With().Caller().Logger()
 	}
 
-	
-
+	templateCache, err := util.NewTemplateCache("./ui/html")
+	if err != nil {
+		log.Fatal().Err(err).Msg("error occurred")
+	}
 
 	conn, err := connectDB(configs.DBSource)
 	if err != nil {
@@ -49,11 +50,7 @@ func main() {
 	defer closeDB(conn)
 	store := db.NewMongoClient(conn)
 
-	runServer(configs, store)
-}
-
-func runServer(configs util.Configs, store models.Store) {
-	server := api.NewServer(configs, store)
+	server := api.NewServer(configs, store, templateCache, log.Logger)
 
 	if err := server.Start(); err != nil {
 		log.Fatal().Err(err).Msg("error occur starting server")

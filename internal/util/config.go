@@ -9,9 +9,8 @@ import (
 // A Configs defines the expected config values.
 type Configs struct {
 	Env                  string        `mapstructure:"ENVIRONMENT"`
-	DBDriver             string        `mapstructure:"DB_DRIVER"`
 	DBSource             string        `mapstructure:"DB_SOURCE"`
-	ServerAddress        string        `mapstructure:"SERVER_ADDRESS"`
+	ServerAddress        string        `mapstructure:"HTTP_SERVER_ADDRESS"`
 	APIHost              string        `mapstructure:"API_SERVICE_HOST"`
 	SessionTokenDuration time.Duration `mapstructure:"SESSION_TOKEN_DURATION"`
 	EmailSenderName      string        `mapstructure:"EMAIL_SENDER_NAME"`
