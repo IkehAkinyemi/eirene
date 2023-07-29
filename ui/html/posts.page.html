@@ -1,0 +1,22 @@
+{{ template "base" .}} {{ define "section"}}Posts{{ end }} {{ define "main" }}
+<section>
+  <div class="posts">
+    <p>Latest blog posts</p>
+    {{ range .Articles }}
+    <div class="post" id="{{ .ID }}">
+        <h3 class="post-title">{{ .Title }}</h3>
+        <div>
+          <span class="post-date">{{ .CreatedAt | friendlyDataFormat }}</span>
+          <span class="post-read-time"> — (8 mins read)</span>
+        </div>
+        <p class="post-synopsis">
+          {{ .Synopsis }}
+        </p>
+        <div class="post-read-more">
+          <a href="/post/{{.ID}}"><b>Read more... &#10230;</b></a>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

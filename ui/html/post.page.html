@@ -1,0 +1,22 @@
+{{ template "base" . }} {{ define "section" }}Post{{ end }} {{ define "main" }}
+<section>
+  <h1 id="post-title">{{ .Article.Title }}</h1>
+  <div class="beneath-title">
+    <div class="beneath-title_first-child">
+      <span>{{ .Article.Author }}</span>
+      <span>•</span>
+      <time datetime="2022-12-08T08:35:28.178Z">{{ .Article.CreatedAt | friendlyDataFormat }}</time>
+      <span>•</span>
+      <span>8 mins read</span>
+    </div>
+    <div class="beneath-title_second-child">
+      <a href="/posts#{{.Article.ID}}">&larr; Back</a
+        >
+    </div>
+  </div>
+
+  <article>
+    {{ .Article.Content }}
+  </article>
+</section>
+{{ end }}
