@@ -9,5 +9,5 @@ type Post struct {
 	Content   string    `json:"content" bson:"content"`
 	Title     string    `yaml:"Title"`
 	Synopsis  string    `yaml:"Synopsis"`
-	ID int `yaml:"ArticleID"`
+	ID        int       `yaml:"ArticleID"`
 }

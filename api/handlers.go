@@ -40,9 +40,13 @@ func (s *Server) posts(w http.ResponseWriter, r *http.Request) {
 			}
 
 			var post models.Post
-			parts := strings.SplitN(string(content), "---", 3)
+			parts := bytes.SplitN(content, s.sep, 3)
 			if len(parts) == 3 {
-				yaml.Unmarshal([]byte(parts[1]), &post)
+				err = yaml.Unmarshal(parts[1], &post)
+				if err != nil {
+					log.Fatal().Err(err).Msg("error occurred")
+				}
+				post.Content = string(blackfriday.Run(parts[2]))
 				posts = append(posts, post)
 			}
 		}
@@ -80,10 +84,9 @@ func (s *Server) post(w http.ResponseWriter, r *http.Request) {
 
 	td := &tmplcache.TemplateData{
 		Article: tmplcache.Article{
-			Post: post,
+			Post:    post,
 			Content: template.HTML(post.Content),
 		},
 	}
 	s.render(w, r, "post.page.html", td)
 }
-

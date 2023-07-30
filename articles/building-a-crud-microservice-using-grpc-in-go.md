@@ -2,7 +2,7 @@
 Author: Chukwuka Ikeh
 CreatedAt: 2023-07-29
 Title: Building a CRUD Microservice using gRPC in Go
-Synopsis: Some synopsis
+Synopsis: Concurrency has been an important topic in computer programming for many years. Concurrent programming is the practice of writing code that can execute multiple tasks simultaneously...
 ArticleID: 1
 ---
 

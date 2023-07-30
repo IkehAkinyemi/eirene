@@ -1,13 +1,36 @@
-{{ template "base" .}} 
-{{ define "section"}}Home{{ end }}
-{{ define "main" }}
+{{ template "base" .}} {{ define "section"}}Home{{ end }} {{ define "main" }}
 <section>
   <h3 class="greeting">Hello 👋🏾</h3>
   <article>
-      <p>
-        You can call me <b>Yemi</b>. Welcome to my corner of the internet where I share my journey and whatnot through blog posts.
-        Hopefully you find them informative.
-      </p>
+    <p>
+      <em
+        >Welcome to my corner of the internet where I share my journey and
+        whatnot through blog posts. Hopefully you find them informative.</em
+      >
+    </p>
+    <p>
+      I'm Ikeh Akinyemi, but you can call me <b>Yemi</b>. I'm a Software
+      Engineer with a fervor for open-source.
+    </p>
+    <p>
+      I possess a broad spectrum of technical expertise, with a keen focus on
+      <b>distributed systems</b>, <b>OS (Linux)</b>,
+      <b>database architecture</b>, and <b>network programming</b>. These
+      specialized areas continually inspire me, enhancing my proficiency and
+      deepening my understanding of backend development complexities.
+    </p>
+    <p>
+      Beyond the realm of engineering, I'm a devoted student of mathematics. My
+      academic pursuits have led me to explore the captivating worlds of both
+      <em>Pure</em> and <em>Applied mathematics</em>, each offering unique
+      perspectives and challenges.
+    </p>
+    <p>
+      Outside the binaries and equations, I find solace in the pages of books.
+      My reading list is a testament to my diverse interests, spanning software
+      engineering, intricate mathematical theories, and the nuances of human
+      psychology.
+    </p>
   </article>
 </section>
 {{ end }}

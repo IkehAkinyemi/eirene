@@ -20,7 +20,7 @@ type Server struct {
 	templateCache map[string]*template.Template
 	logger        zerolog.Logger
 	sep           []byte
-	articleDir string
+	articleDir    string
 }
 
 func NewServer(
@@ -32,8 +32,8 @@ func NewServer(
 		configs:       configs,
 		templateCache: templateCache,
 		logger:        logger,
-		sep: []byte("---"),
-		articleDir: "./articles",
+		sep:           []byte("---"),
+		articleDir:    "./articles",
 	}
 }
 

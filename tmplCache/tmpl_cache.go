@@ -3,6 +3,8 @@ package tmplcache
 import (
 	"html/template"
 	"path/filepath"
+	"regexp"
+	"strings"
 	"time"
 
 	"github.com/IkehAkinyemi/eirene/models"
@@ -11,9 +13,9 @@ import (
 // Define a templateData type to act as the holding structure for
 // any dynamic data that we want to pass to our HTML templates.
 type TemplateData struct {
-	CurrentYear     int
-	Article         Article
-	Articles []models.Post
+	CurrentYear int
+	Article     Article
+	Articles    []models.Post
 }
 
 type Article struct {
@@ -23,6 +25,8 @@ type Article struct {
 
 var functions = template.FuncMap{
 	"friendlyDataFormat": FriendlyDataFormat,
+	"slugify":            Slugify,
+	"calReadTime":        CalculateReadTime,
 }
 
 func NewTemplateCache(dir string) (map[string]*template.Template, error) {
@@ -56,4 +60,34 @@ func FriendlyDataFormat(t time.Time) string {
 		return ""
 	}
 	return t.UTC().Format("02 Jan 2006")
+}
+
+func Slugify(s string) string {
+	s = strings.ToLower(s)
+
+	s = strings.Map(func(r rune) rune {
+		if r > 127 {
+			return -1
+		}
+		return r
+	}, s)
+
+	reg := regexp.MustCompile(`[^a-z0-9]+`)
+	s = reg.ReplaceAllString(s, "-")
+
+	s = strings.Trim(s, "-")
+
+	return s
+}
+
+func CalculateReadTime(text string) int {
+	words := strings.Fields(text)
+	wordCount := len(words)
+
+	// Assume an average reading speed of 200 words per minute
+	readingSpeed := 200
+
+	readTime := (wordCount + readingSpeed - 1) / readingSpeed // This ensures rounding up
+
+	return readTime
 }

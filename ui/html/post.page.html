@@ -5,18 +5,19 @@
     <div class="beneath-title_first-child">
       <span>{{ .Article.Author }}</span>
       <span>•</span>
-      <time datetime="2022-12-08T08:35:28.178Z">{{ .Article.CreatedAt | friendlyDataFormat }}</time>
+      <time datetime="2022-12-08T08:35:28.178Z"
+        >{{ .Article.CreatedAt | friendlyDataFormat }}</time
+      >
       <span>•</span>
-      <span>8 mins read</span>
+      <span class="read-time"
+        >{{ .Article.Post.Content | calReadTime }} mins read</span
+      >
     </div>
     <div class="beneath-title_second-child">
-      <a href="/posts#{{.Article.ID}}">&larr; Back</a
-        >
+      <a href="/posts#{{ .Article.Title | slugify }}">&larr; Back</a>
     </div>
   </div>
 
-  <article>
-    {{ .Article.Content }}
-  </article>
+  <article class="blog-post">{{ .Article.Content }}</article>
 </section>
 {{ end }}
