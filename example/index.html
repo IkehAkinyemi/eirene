@@ -1,4 +1,3 @@
-{{ define "base" }}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,11 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
     />
-    <link
-      rel="shortcut icon"
-      href="/static/img/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="icon" type="image/x-icon" href="./favicon-32x32.png">
     <title>Ikeh Akinyemi</title>
   </head>
   <body>
@@ -44,7 +39,7 @@
       </header>
 
       <!--Main-->
-      {{ template "main" .}}
+      
 
       <!--Footer-->
       <footer>
@@ -74,4 +69,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
   </body>
 </html>
-{{ end }}
