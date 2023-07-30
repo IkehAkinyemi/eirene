@@ -123,6 +123,11 @@ footer .socials a {
   section .posts .post .post-read-time {
     font-size: 14px;
   }
+
+  section .posts .post .post-synopsis {
+    font-size: 14px;
+    margin: 8px 0; 
+  }
 }
 
 /* Styles for screens with a maximum width of 576px */
@@ -153,6 +158,11 @@ footer .socials a {
 
   .beneath-title_second-child a {
     font-size: 14px;
+  }
+
+  section .posts .post .post-synopsis {
+    font-size: 12px;
+    margin: 6px 0;
   }
 }
 
@@ -185,9 +195,19 @@ footer .socials a {
   .beneath-title_second-child a {
     font-size: 12px;
   }
+
+  section .posts .post .post-synopsis {
+    font-size: 10px;
+    margin: 4px 0; 
+  }
 }
 
 b {
   font-weight: bolder;
   color: blue;
-} 
+}
+
+.post-title_link {
+  text-decoration: none;
+  color: #000;
+}

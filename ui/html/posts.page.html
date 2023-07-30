@@ -4,7 +4,8 @@
     <p>Latest blog posts</p>
     {{ range .Articles }}
     <div class="post" id="{{ .Title | slugify }}">
-      <h3 class="post-title">{{ .Title }}</h3>
+      <h3 class="post-title"><a href="/post/{{ .Title | slugify }}" class="post-title_link">{{ .Title }}</a></h3>
+
       <div>
         <span class="post-date">{{ .CreatedAt | friendlyDataFormat }}</span>
         <span class="post-read-time">

@@ -14,14 +14,12 @@
     />
     <link rel="stylesheet" href="/static/css/main.css" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
-    />
-    <link
       rel="shortcut icon"
       href="/static/img/favicon.ico"
       type="image/x-icon"
     />
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
     <title>Ikeh Akinyemi</title>
   </head>
   <body>
@@ -70,8 +68,9 @@
         </p>
       </footer>
     </div>
-    <script src="../static/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </body>
 </html>
 {{ end }}
