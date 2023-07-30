@@ -8,9 +8,7 @@ body {
   line-height: 1.7;
 }
 
-header h1,
-h2,
-h3 {
+header h1, h2, h3 {
   margin: 25px 0;
   font-size: 1.5rem;
 }
@@ -24,7 +22,7 @@ header .nav-container nav {
 }
 
 header .nav-container nav span {
-  padding-right: 25px;
+  padding-right: 30px; /* Increased spacing for mobile touch targets */
 }
 
 header .nav-container nav span a {
@@ -45,8 +43,7 @@ header .nav-container nav span a.active::after {
 }
 
 /* Home Main section and Posts Main section styles */
-section article,
-p {
+section article, p {
   margin: 20px 0;
 }
 
@@ -67,8 +64,7 @@ section .posts .post .post-synopsis {
   margin: 10px 0;
 }
 
-section .posts .post .post-date,
-section .posts .post .post-read-time {
+section .posts .post .post-date, section .posts .post .post-read-time {
   margin-top: 0;
   font-size: medium;
   font-size: 15px;
@@ -104,14 +100,12 @@ footer .socials a {
     margin: 5%;
   }
 
-  header h1,
-  h2,
-  h3 {
-    font-size: 1.2rem;
+  header h1, h2, h3 {
+    font-size: 1.4rem; /* Increased font size */
   }
 
   header .nav-container nav {
-    font-size: 14px;
+    font-size: 16px; /* Increased font size */
   }
 
   section .posts .post {
@@ -119,14 +113,13 @@ footer .socials a {
     border-radius: 8px;
   }
 
-  section .posts .post .post-date,
-  section .posts .post .post-read-time {
-    font-size: 14px;
+  section .posts .post .post-date, section .posts .post .post-read-time {
+    font-size: 16px; /* Increased font size */
   }
 
   section .posts .post .post-synopsis {
-    font-size: 14px;
-    margin: 8px 0; 
+    font-size: 16px; /* Increased font size */
+    margin: 8px 0;
   }
 }
 
@@ -136,14 +129,12 @@ footer .socials a {
     margin: 2%;
   }
 
-  header h1,
-  h2,
-  h3 {
-    font-size: 1rem;
+  header h1, h2, h3 {
+    font-size: 1.2rem; /* Increased font size */
   }
 
   header .nav-container nav {
-    font-size: 12px;
+    font-size: 14px; /* Increased font size */
   }
 
   section .posts .post {
@@ -151,17 +142,12 @@ footer .socials a {
     border-radius: 6px;
   }
 
-  section .posts .post .post-date,
-  section .posts .post .post-read-time {
-    font-size: 12px;
-  }
-
-  .beneath-title_second-child a {
-    font-size: 14px;
+  section .posts .post .post-date, section .posts .post .post-read-time {
+    font-size: 14px; /* Increased font size */
   }
 
   section .posts .post .post-synopsis {
-    font-size: 12px;
+    font-size: 14px; /* Increased font size */
     margin: 6px 0;
   }
 }
@@ -172,14 +158,12 @@ footer .socials a {
     margin: 1%;
   }
 
-  header h1,
-  h2,
-  h3 {
-    font-size: 0.9rem;
+  header h1, h2, h3 {
+    font-size: 1.1rem; /* Increased font size */
   }
 
   header .nav-container nav {
-    font-size: 10px;
+    font-size: 12px; /* Increased font size */
   }
 
   section .posts .post {
@@ -187,18 +171,13 @@ footer .socials a {
     border-radius: 4px;
   }
 
-  section .posts .post .post-date,
-  section .posts .post .post-read-time {
-    font-size: 10px;
-  }
-
-  .beneath-title_second-child a {
-    font-size: 12px;
+  section .posts .post .post-date, section .posts .post .post-read-time {
+    font-size: 12px; /* Increased font size */
   }
 
   section .posts .post .post-synopsis {
-    font-size: 10px;
-    margin: 4px 0; 
+    font-size: 12px; /* Increased font size */
+    margin: 4px 0;
   }
 }
 
