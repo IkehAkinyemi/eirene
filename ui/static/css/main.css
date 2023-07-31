@@ -131,6 +131,10 @@ footer .socials a {
     font-size: 16px; 
     margin: 8px 0;
   }
+
+  code:not(pre > code) {
+    padding: 2px 4px;
+  }
 }
 
 /* Styles for screens with a maximum width of 576px */
@@ -163,6 +167,10 @@ footer .socials a {
     font-size: 14px;
     margin: 6px 0;
   }
+
+  code:not(pre > code) {
+    padding: 1px 3px;
+  }
 }
 
 /* Styles for screens with a maximum width of 320px */
@@ -194,6 +202,10 @@ footer .socials a {
   section .posts .post .post-synopsis {
     font-size: 12px;
     margin: 4px 0;
+  }
+
+  code:not(pre > code) {
+    padding: 1px 2px;
   }
 }
 
