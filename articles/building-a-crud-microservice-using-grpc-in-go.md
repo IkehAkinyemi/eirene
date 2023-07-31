@@ -530,10 +530,10 @@ Rust's concurrency features make it a powerful language for writing high-perform
 
 ### Links to Further Reading
 
-Rust Programming Language: https://www.rust-lang.org/
-The Rust Programming Language (Book): https://doc.rust-lang.org/book/
-Rust by Example: https://doc.rust-lang.org/rust-by-example/
-Rust Cookbook: https://rust-lang-nursery.github.io/rust-cookbook/
-The Rayon Parallelism Library: https://github.com/rayon-rs/rayon
-Tokio: https://tokio.rs/
-Async-std: https://async.rs/
+- Rust Programming Language: https://www.rust-lang.org/
+- The Rust Programming Language (Book): https://doc.rust-lang.org/book/
+- Rust by Example: https://doc.rust-lang.org/rust-by-example/
+- Rust Cookbook: https://rust-lang-nursery.github.io/rust-cookbook/
+- The Rayon Parallelism Library: https://github.com/rayon-rs/rayon
+- Tokio: https://tokio.rs/
+- Async-std: https://async.rs/

@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 
 	"github.com/IkehAkinyemi/eirene/models"
@@ -25,7 +26,7 @@ func (s *Server) home(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) posts(w http.ResponseWriter, r *http.Request) {
-	var posts []models.Post
+	var posts models.Posts
 
 	files, err := os.ReadDir(s.articleDir)
 	if err != nil {
@@ -51,6 +52,8 @@ func (s *Server) posts(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 	}
+
+	sort.Sort(posts)
 
 	td := &tmplcache.TemplateData{
 		Articles: posts,

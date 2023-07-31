@@ -8,8 +8,13 @@ body {
   line-height: 1.7;
 }
 
-header h1, h2, h3 {
+header h1 {
   margin: 25px 0;
+}
+
+header h1,
+h2,
+h3 {
   font-size: 1.5rem;
 }
 
@@ -43,7 +48,8 @@ header .nav-container nav span a.active::after {
 }
 
 /* Home Main section and Posts Main section styles */
-section article, p {
+section article,
+p {
   margin: 20px 0;
 }
 
@@ -64,7 +70,8 @@ section .posts .post .post-synopsis {
   margin: 10px 0;
 }
 
-section .posts .post .post-date, section .posts .post .post-read-time {
+section .posts .post .post-date,
+section .posts .post .post-read-time {
   margin-top: 0;
   font-size: medium;
   font-size: 15px;
@@ -100,12 +107,14 @@ footer .socials a {
     margin: 5%;
   }
 
-  header h1, h2, h3 {
-    font-size: 1.4rem; /* Increased font size */
+  header h1,
+  h2,
+  h3 {
+    font-size: 1.4rem; 
   }
 
   header .nav-container nav {
-    font-size: 16px; /* Increased font size */
+    font-size: 16px;
   }
 
   section .posts .post {
@@ -113,12 +122,13 @@ footer .socials a {
     border-radius: 8px;
   }
 
-  section .posts .post .post-date, section .posts .post .post-read-time {
-    font-size: 16px; /* Increased font size */
+  section .posts .post .post-date,
+  section .posts .post .post-read-time {
+    font-size: 16px; 
   }
 
   section .posts .post .post-synopsis {
-    font-size: 16px; /* Increased font size */
+    font-size: 16px; 
     margin: 8px 0;
   }
 }
@@ -129,12 +139,14 @@ footer .socials a {
     margin: 2%;
   }
 
-  header h1, h2, h3 {
-    font-size: 1.2rem; /* Increased font size */
+  header h1,
+  h2,
+  h3 {
+    font-size: 1.2rem;
   }
 
   header .nav-container nav {
-    font-size: 14px; /* Increased font size */
+    font-size: 14px;
   }
 
   section .posts .post {
@@ -142,12 +154,13 @@ footer .socials a {
     border-radius: 6px;
   }
 
-  section .posts .post .post-date, section .posts .post .post-read-time {
-    font-size: 14px; /* Increased font size */
+  section .posts .post .post-date,
+  section .posts .post .post-read-time {
+    font-size: 14px;
   }
 
   section .posts .post .post-synopsis {
-    font-size: 14px; /* Increased font size */
+    font-size: 14px;
     margin: 6px 0;
   }
 }
@@ -158,12 +171,14 @@ footer .socials a {
     margin: 1%;
   }
 
-  header h1, h2, h3 {
-    font-size: 1.1rem; /* Increased font size */
+  header h1,
+  h2,
+  h3 {
+    font-size: 1.1rem;
   }
 
   header .nav-container nav {
-    font-size: 12px; /* Increased font size */
+    font-size: 12px;
   }
 
   section .posts .post {
@@ -171,12 +186,13 @@ footer .socials a {
     border-radius: 4px;
   }
 
-  section .posts .post .post-date, section .posts .post .post-read-time {
-    font-size: 12px; /* Increased font size */
+  section .posts .post .post-date,
+  section .posts .post .post-read-time {
+    font-size: 12px;
   }
 
   section .posts .post .post-synopsis {
-    font-size: 12px; /* Increased font size */
+    font-size: 12px;
     margin: 4px 0;
   }
 }
@@ -189,4 +205,18 @@ b {
 .post-title_link {
   text-decoration: none;
   color: #000;
+}
+
+/* Style for inline code */
+code:not(pre > code) {
+  background-color: #f4f4f4;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  color: #d14;
+  border: 1px solid #d1d5da;
+}
+
+.blog-post ul {
+  padding-left: 20px;
 }
